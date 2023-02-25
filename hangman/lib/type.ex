@@ -1,4 +1,4 @@
-defmodule HangmanType do
+defmodule Hangman.Type do
   @type state :: :initializing | :won | :lost | :goood_guess | :bad_guess | :already_used
 
   @type tally :: %{
