@@ -1,6 +1,6 @@
 defmodule Hangman do
   alias Hangman.Impl.Game, as: Game
-  alias Hangman.Type
+  alias Hangman.Type, as: Type
 
   @opaque game :: Game.t()
 
@@ -9,4 +9,7 @@ defmodule Hangman do
 
   @spec make_move(game, String.t()) :: {game, Type.tally()}
   defdelegate make_move(game, guess), to: Game
+
+  @spec tally(game) :: Type.tally()
+  defdelegate tally(game), to: Game
 end
